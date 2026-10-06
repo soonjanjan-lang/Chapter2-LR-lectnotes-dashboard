@@ -1,0 +1,193 @@
+<section class="tab-panel" id="tab-prompts" data-slug="prompts" data-title="AI prompts for the literature review" data-short="AI prompts" data-icon="terminal">
+  <header class="panel-head">
+    <h1>AI prompts for the literature review</h1>
+    <p class="lede">A good prompt gives an AI tool a role, the context, a precise task, the inputs, firm limits, a format for the answer, and a check to run on itself. This lesson explains that structure and provides eighteen complete prompts for every stage of the review.</p>
+  </header>
+
+  <!-- ============================== ANATOMY ============================== -->
+  <article class="sub-panel" id="prompts--anatomy" data-sub="anatomy" data-title="Prompt anatomy">
+    <div class="outcomes">
+      <h3>After this part you can</h3>
+      <ul>
+        <li>name the seven parts of a complete prompt;</li>
+        <li>explain why limits and self-checks reduce invented content;</li>
+        <li>turn a weak prompt into a strong one.</li>
+      </ul>
+    </div>
+
+    <h2>The seven parts of a complete prompt</h2>
+    <div class="table-wrap">
+      <table class="data data--wrap">
+        <thead><tr><th scope="col">Part</th><th scope="col">What it does</th><th scope="col">Example</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">1. Role</th><td>Sets the expertise and standards the answer should meet</td><td>"Act as a sceptical external examiner for an economics PhD."</td></tr>
+          <tr><th scope="row">2. Context</th><td>Tells the tool what it cannot know: your topic, setting, data, stage</td><td>"My thesis asks how B40 households respond to food prices in Malaysia, using HES data."</td></tr>
+          <tr><th scope="row">3. Task</th><td>One clear job, broken into numbered steps</td><td>"1. Classify the gap. 2. Apply three tests. 3. List the five hardest questions."</td></tr>
+          <tr><th scope="row">4. Inputs</th><td>The material to work on, clearly marked</td><td>"[PASTE GAP STATEMENT]"</td></tr>
+          <tr><th scope="row">5. Constraints</th><td>What not to do: the guard against invention and ghost-writing</td><td>"Use only the sources. Do not add citations. Do not rewrite."</td></tr>
+          <tr><th scope="row">6. Output format</th><td>The shape of the answer, so that you can use it directly</td><td>"A table: sentence | source | verdict | quote."</td></tr>
+          <tr><th scope="row">7. Self-check</th><td>A test the tool applies before answering</td><td>"Confirm every quote says what the sentence claims."</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Weak and strong</h3>
+    <div class="compare">
+      <div class="compare__side compare__bad">
+        <p class="compare__label"><svg class="icon" aria-hidden="true"><use href="#i-x-circle"/></svg>Weak prompt</p>
+        <div class="prompt mb-0"><pre class="prompt__body">Write a literature review on minimum wage in Malaysia with references.</pre></div>
+        <div class="why">
+          <b>What goes wrong</b>
+          <ul>
+            <li>Asks the tool to do the student's job, which is an integrity problem.</li>
+            <li>"With references" invites invented citations.</li>
+            <li>No research question, so the review has no direction.</li>
+            <li>No format, no limits, no check.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="compare__side compare__good">
+        <p class="compare__label"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>Strong prompt</p>
+        <div class="prompt mb-0"><pre class="prompt__body">ROLE: Act as a senior labour economist who writes survey articles.
+CONTEXT: My question is whether Malaysia's 2013 minimum wage reduced youth employment. Below is my matrix of 18 studies.
+[PASTE MATRIX]
+TASK: Propose 3 to 5 themes that organise these studies; assign each study; note agreements, disagreements and likely reasons.
+CONSTRAINTS: Use only the studies in the matrix. Do not add studies. Do not write paragraphs.
+OUTPUT: One block per theme: name | studies | agreements | disagreements.
+SELF-CHECK: Every study appears under at least one theme.</pre></div>
+        <div class="why">
+          <b>Why it works</b>
+          <ul>
+            <li>The tool organises your material; you write the review.</li>
+            <li>Inputs are your own verified matrix, so nothing is invented.</li>
+            <li>The output can go straight into your planning.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3>One prompt, dissected</h3>
+    <div class="annotated">
+      <p class="annotated__source">Prompt W4 from the library: "Stress-test my gap statement".</p>
+      <div class="annotated__row">
+        <div class="annotated__text"><p><span class="hl" data-n>ROLE: Act as a sceptical external examiner for a PhD in applied microeconomics.</span></p></div>
+        <aside class="note"><span class="note__who">Role</span><p>"Sceptical" and "examiner" raise the standard of the answer.</p></aside>
+      </div>
+      <div class="annotated__row">
+        <div class="annotated__text"><p><span class="hl" data-n>CONTEXT: My research question is "..." in Malaysia. My gap statement is: [PASTE]</span></p></div>
+        <aside class="note"><span class="note__who">Context and input</span><p>The tool cannot judge a gap without knowing the question and the setting.</p></aside>
+      </div>
+      <div class="annotated__row">
+        <div class="annotated__text"><p><span class="hl" data-n>TASK: 1. Classify the gap ... 2. Apply three tests ... 3. Ask the five hardest questions ... 4. Point out any claim that is too strong.</span></p></div>
+        <aside class="note"><span class="note__who">Task</span><p>Numbered steps get numbered answers, which are easy to act on.</p></aside>
+      </div>
+      <div class="annotated__row">
+        <div class="annotated__text"><p><span class="hl" data-n>CONSTRAINTS: Do not rewrite the statement and do not invent studies that might already fill the gap; instead, tell me what kind of study I should search for.</span></p></div>
+        <aside class="note"><span class="note__who">Constraints</span><p>Keeps authorship with you, and turns a likely hallucination ("Smith (2021) already did this") into a search instruction.</p></aside>
+      </div>
+      <div class="annotated__row">
+        <div class="annotated__text"><p><span class="hl" data-n>SELF-CHECK: Make sure the examiner questions are specific to my statement, not generic.</span></p></div>
+        <aside class="note"><span class="note__who">Self-check</span><p>Reduces the stock answers that sound wise but fit any thesis.</p></aside>
+      </div>
+    </div>
+
+    <div class="callout callout--key">
+      <p class="callout__title"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg>Four habits</p>
+      <ul class="mb-0">
+        <li>Give the tool your material to work on, rather than asking it what it knows.</li>
+        <li>Ask for critique and structure, not for finished prose.</li>
+        <li>Forbid invented citations explicitly, every time.</li>
+        <li>Treat every output as a draft for you to verify.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- ============================== LIBRARY ============================== -->
+  <article class="sub-panel" id="prompts--library" data-sub="library" data-title="Prompt library">
+    <div class="sub-head">
+      <h2>Prompt library</h2>
+      <p class="sub-meta">Eighteen complete prompts. Replace the bracketed parts, or fill them automatically in the <a href="#/prompts/builder">prompt builder</a>.</p>
+    </div>
+    <div class="btn-row" id="prompt-filter" role="group" aria-label="Filter prompts by stage"></div>
+    <div id="prompt-library"></div>
+    <p class="fine">All prompts can be downloaded as one file from the <a href="#/toolkit/downloads">downloads</a> page.</p>
+  </article>
+
+  <!-- ============================== BUILDER ============================== -->
+  <article class="sub-panel" id="prompts--builder" data-sub="builder" data-title="Prompt builder">
+    <div class="sub-head">
+      <h2>Prompt builder</h2>
+      <p class="sub-meta">Fill in your project details once; every prompt in the library is filled in for you. Your details stay in this browser.</p>
+    </div>
+    <div class="tool" id="prompt-tool">
+      <div class="tool__head">
+        <h3 class="tool__title"><svg class="icon" aria-hidden="true"><use href="#i-terminal"/></svg>Build a prompt</h3>
+        <p>Pick a prompt, fill the fields, copy the result.</p>
+      </div>
+      <div class="tool__body">
+        <div class="tool__split">
+          <div>
+            <div class="field"><label for="pb-select">Prompt</label><select id="pb-select"></select></div>
+            <div id="pb-fields"></div>
+            <div class="btn-row">
+              <button type="button" class="btn btn--small" id="pb-example">Fill with the food-price example</button>
+              <button type="button" class="btn btn--small btn--ghost" id="pb-clear">Clear my details</button>
+            </div>
+          </div>
+          <div>
+            <p class="field__label" id="pb-title">Preview</p>
+            <p class="small muted" id="pb-use"></p>
+            <div class="prompt"><div class="prompt__head"><span class="prompt__name">Your prompt</span></div><pre class="prompt__body" id="pb-out"></pre></div>
+            <div id="pb-after"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- ============================== RESPONSIBLE ============================== -->
+  <article class="sub-panel" id="prompts--responsible" data-sub="responsible" data-title="Responsible use">
+    <div class="sub-head">
+      <h2>Using AI responsibly in Chapter 2</h2>
+      <p class="sub-meta">You are the author. AI tools may help you search, organise and check; they may not think or write the review for you.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="data data--wrap">
+        <thead><tr><th scope="col"><span class="tag tag--good">Generally acceptable</span></th><th scope="col"><span class="tag tag--gilt">Ask first, and disclose</span></th><th scope="col"><span class="tag tag--bad">Not acceptable</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td><ul class="mb-0"><li>Brainstorming keywords and synonyms</li><li>Finding candidate papers in tools built on real databases</li><li>Explaining a method you are learning</li><li>Organising your own notes and matrix</li><li>Critique of your draft that you then act on</li></ul></td>
+            <td><ul class="mb-0"><li>Language editing of passages you wrote</li><li>Summaries of papers you will then read</li><li>Drafting tables from uploaded sources</li><li>Translating a source from another language</li></ul></td>
+            <td><ul class="mb-0"><li>Generating paragraphs or sections and presenting them as your own</li><li>Citing a paper you have not read</li><li>Including any reference you have not verified</li><li>Uploading confidential data, unpublished work by others, or examiners' reports</li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">This is general guidance. Your university, your graduate school and the journals you submit to set the rules that apply to you. Check UUM's current official guidance on generative AI and ask your supervisor; where rules differ, the stricter rule applies.</p>
+
+    <h3>What journals and publishers expect</h3>
+    <p>Publishers broadly agree on two points: an AI tool cannot be listed as an author, because it cannot take responsibility for the work (COPE's position statement on authorship and AI tools makes this point), and authors must disclose how they used AI tools, typically in the methods or acknowledgements. Many allow AI-assisted language editing with disclosure. Check the policy of each journal before you submit chapters as papers.</p>
+
+    <h3>A disclosure statement you can adapt</h3>
+    <div class="prompt">
+      <div class="prompt__head"><span class="prompt__name"><svg class="icon" aria-hidden="true"><use href="#i-pen"/></svg>Example disclosure (for the thesis front matter or methodology)</span></div>
+      <pre class="prompt__body">Use of generative AI tools. In preparing Chapter 2, I used [tool name and version] between [month year] and [month year] to (a) suggest search terms and JEL codes, (b) draft a first version of the summary matrix from papers I had selected and uploaded, and (c) suggest language edits to passages I had written. I checked every entry in the matrix against the original papers, verified every reference, and accepted or rejected each language edit individually. No text generated by these tools has been included without my revision, and I take full responsibility for the content of this thesis.</pre>
+    </div>
+
+    <h3>Verification is not optional</h3>
+    <ol class="steps">
+      <li><strong>Every reference exists:</strong> found on the publisher's site or through its DOI.</li>
+      <li><strong>Every reference says what you say it says:</strong> checked in the paper, with page or table numbers in your notes.</li>
+      <li><strong>Every number is right:</strong> coefficients, sample sizes and years copied from the paper, not from a summary.</li>
+      <li><strong>Every sentence is yours:</strong> you can explain and defend it in your viva.</li>
+    </ol>
+
+    <details class="teach">
+      <summary><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>Teaching note: the viva test</summary>
+      <div class="teach__body">
+        <p class="mb-0">Tell students that any sentence in Chapter 2 may be read back to them in the viva with the question "What did you mean by this, and how do you know?" A sentence they cannot answer for should not be in the thesis, whoever or whatever drafted it. This framing works better than lists of prohibited uses.</p>
+      </div>
+    </details>
+  </article>
+</section>

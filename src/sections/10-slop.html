@@ -1,0 +1,242 @@
+<section class="tab-panel" id="tab-slop" data-slug="slop" data-title="Spotting AI-written text" data-short="AI slop" data-icon="alert">
+  <header class="panel-head">
+    <h1>Spotting AI-written text</h1>
+    <p class="lede">"Slop" is text that sounds fluent but says little: inflated words, stock phrases, formulaic structure and, at worst, invented citations. Learn to recognise it in sources, in classmates' drafts, and above all in your own writing.</p>
+  </header>
+
+  <!-- ============================== WORDS ============================== -->
+  <article class="sub-panel" id="slop--words" data-sub="words" data-title="Words and phrases">
+    <div class="outcomes">
+      <h3>After this part you can</h3>
+      <ul>
+        <li>recognise the vocabulary most associated with chatbot prose;</li>
+        <li>replace it with plain, specific words;</li>
+        <li>explain why a single word proves nothing, but a cluster is a warning.</li>
+      </ul>
+    </div>
+
+    <h2>Why certain words give text away</h2>
+    <p>Large language models favour some words far more than human writers do. Kobak et al. (2025) analysed more than 15 million biomedical abstracts from 2010 to 2024 and found an abrupt rise, after chatbots became widely available, in "style words" such as <i>delves</i>, <i>showcasing</i> and <i>underscores</i>. From this excess vocabulary they estimated that at least 13.5% of 2024 abstracts had been processed with a language model.</p>
+
+    <div class="callout callout--note">
+      <p class="callout__title"><svg class="icon" aria-hidden="true"><use href="#i-scale"/></svg>One word proves nothing</p>
+      <p class="mb-0">People wrote "crucial" and "comprehensive" long before chatbots. What signals generated text is a <b>cluster</b>: several of these words in one paragraph, together with the structural patterns in the <a href="#/slop/patterns">next part</a> and an absence of specifics. Use the list to edit your own work, not to accuse others.</p>
+    </div>
+
+    <h3>The list</h3>
+    <div class="field"><label for="slop-filter">Filter the list</label><input type="search" id="slop-filter" placeholder="Type a word, e.g. role"></div>
+    <div class="table-wrap">
+      <table class="data data--compact data--wrap" id="slop-table">
+        <thead><tr><th scope="col">Word or phrase</th><th scope="col">Type</th><th scope="col">Write instead</th><th scope="col">Why it is a problem</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </article>
+
+  <!-- ============================== PATTERNS ============================== -->
+  <article class="sub-panel" id="slop--patterns" data-sub="patterns" data-title="Patterns and structure">
+    <div class="sub-head">
+      <h2>Structural and rhetorical patterns</h2>
+      <p class="sub-meta">Generated text is recognisable as much by its shape as by its words.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table class="data data--wrap">
+        <thead><tr><th scope="col">Pattern</th><th scope="col">Example</th><th scope="col">Fix</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Generic opener</th><td>"In today's rapidly evolving economic landscape, ..."</td><td>Start with a fact about your topic, with a date and a source.</td></tr>
+          <tr><th scope="row">Moralising closer</th><td>Every paragraph ends "Overall, this highlights the importance of ..."</td><td>End with the specific implication, or simply stop.</td></tr>
+          <tr><th scope="row">Lists of exactly three</th><td>"efficient, equitable, and sustainable"; "households, firms, and governments"</td><td>Use the number of items the content actually has.</td></tr>
+          <tr><th scope="row">"Not only ... but also"; "not just X, but Y"</th><td>"Mobile money not only empowers households but also bolsters resilience."</td><td>Say what it does, with evidence.</td></tr>
+          <tr><th scope="row">Uniform rhythm</th><td>Every sentence 20 to 25 words; every paragraph five sentences.</td><td>Vary length naturally; let short sentences carry key points.</td></tr>
+          <tr><th scope="row">Mechanical connectors</th><td>Furthermore, ... Moreover, ... Additionally, ... at the start of most sentences</td><td>Let the logic connect the sentences; use a connector only where it adds meaning.</td></tr>
+          <tr><th scope="row">Em-dash habit</th><td>"Remittances — a vital lifeline — support education — especially for girls."</td><td>Commas, colons or brackets; or two sentences.</td></tr>
+          <tr><th scope="row">Vague attribution</th><td>"Studies have shown ..."; "Research suggests ..."; "Experts agree ..."</td><td>Name and cite the studies.</td></tr>
+          <tr><th scope="row">False balance</th><td>"On one hand ... on the other hand ..." with no judgement</td><td>Say which evidence is stronger, and why.</td></tr>
+          <tr><th scope="row">Synonym cycling</th><td>"financial inclusion ... access to finance ... financial access ..." for the same thing</td><td>Define one term and keep it; changing terms suggests a change in meaning.</td></tr>
+          <tr><th scope="row">Hedge stacking</th><td>"may potentially suggest a possible link"</td><td>One hedge, matched to the strength of the evidence.</td></tr>
+          <tr><th scope="row">Bullet points in place of prose</th><td>A literature review written as bulleted lists with bold lead-ins</td><td>Paragraphs: the argument lives in the connections.</td></tr>
+          <tr><th scope="row">Headline-style headings</th><td>"Navigating the Landscape: A Comprehensive Overview of Financial Inclusion"</td><td>Plain descriptive headings: "2.3 Determinants of account use".</td></tr>
+          <tr><th scope="row">Chatbot residue</th><td>"Certainly! Here is a revised paragraph ..."; "As of my last knowledge update ..."</td><td>Never paste a chatbot answer into your thesis.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout--try">
+      <p class="callout__title"><svg class="icon" aria-hidden="true"><use href="#i-pencil"/></svg>Try it</p>
+      <p class="mb-0">Count the patterns in this paragraph: "In today's world, poverty plays a crucial role in shaping outcomes. Moreover, studies have shown that education is vital. Furthermore, it is not just about income, but about opportunity, dignity, and empowerment. Ultimately, a holistic approach is paramount." Then check your count in the <a href="#/slop/scanner">scanner</a>.</p>
+    </div>
+  </article>
+
+  <!-- ============================== CITATIONS ============================== -->
+  <article class="sub-panel" id="slop--citations" data-sub="citations" data-title="Fake citations">
+    <div class="sub-head">
+      <h2>Fabricated and garbled citations</h2>
+      <p class="sub-meta">The most serious trace of careless AI use, because it is a matter of academic integrity, not style.</p>
+    </div>
+
+    <h3>Warning signs in a reference</h3>
+    <ul>
+      <li>The title sounds exactly right for your argument, but Google Scholar cannot find it in quotation marks.</li>
+      <li>Real, well-known authors, attached to a paper they did not write.</li>
+      <li>A plausible journal that does not publish on that topic, or volume and page numbers that do not match the year.</li>
+      <li>A DOI that does not resolve, or resolves to a different paper.</li>
+      <li>A year in the future, or a "2024" paper cited for data that were not released until later.</li>
+      <li>"et al." on a single-author paper, or the wrong first author.</li>
+      <li>A perfectly formatted reference list alongside messy, inconsistent in-text citations.</li>
+    </ul>
+
+    <h3>Warning signs in the text</h3>
+    <ul>
+      <li>A finding attributed to a study that, on reading, says something different or nothing on the point.</li>
+      <li>Summaries with no numbers, samples or methods, only conclusions.</li>
+      <li>No disagreement anywhere in the literature.</li>
+      <li>Missing seminal works, but many recent and obscure ones.</li>
+      <li>Direct quotations without page numbers.</li>
+    </ul>
+
+    <div class="callout callout--worked">
+      <p class="callout__title"><svg class="icon" aria-hidden="true"><use href="#i-list-checks"/></svg>Worked example: checking a suspicious reference</p>
+      <p>A draft cites: <em>Rahman, A., &amp; Lee, K. (2021). Mobile wallets and household resilience in Malaysia. Journal of Development Economics, 152, 102–118.</em>†</p>
+      <ol class="mb-0">
+        <li>The exact title in quotation marks returns nothing in Google Scholar.</li>
+        <li>The <em>Journal of Development Economics</em> uses article numbers (for example, 102718) rather than page ranges such as 102–118 for recent volumes.</li>
+        <li>No DOI is given; Crossref finds no match for the title.</li>
+        <li>Conclusion: treat as fabricated. Remove it, and find a real source for the claim or drop the claim.</li>
+      </ol>
+    </div>
+
+    <p>See the <a href="#/search/ai-search">AI search</a> lesson for the two-minute verification routine, and use <a href="#/prompts/library">prompt C3</a> in Gemini Notebook to check whether your sentences match the papers you cite.</p>
+  </article>
+
+  <!-- ============================== DETECTORS ============================== -->
+  <article class="sub-panel" id="slop--detectors" data-sub="detectors" data-title="About AI detectors">
+    <div class="sub-head">
+      <h2>What AI detectors can and cannot do</h2>
+      <p class="sub-meta">Detector scores are probabilities, not proof, and they are least reliable for exactly the writers in a Malaysian PhD class.</p>
+    </div>
+
+    <div class="grid grid--2">
+      <div class="card">
+        <h3 class="mt-0">Limitations</h3>
+        <ul class="mb-0">
+          <li><b>False positives.</b> Human text is sometimes scored as AI-generated.</li>
+          <li><b>Bias against second-language writers.</b> Liang et al. (2023) found that several widely used detectors misclassified essays by non-native English writers as AI-generated far more often than essays by native speakers, because simpler, more predictable wording scores as "machine-like".</li>
+          <li><b>Easy to evade.</b> Paraphrasing tools and light editing change scores substantially.</li>
+          <li><b>Opaque.</b> A score does not show which sentences are suspect, or why.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="mt-0">Better evidence</h3>
+        <ul class="mb-0">
+          <li>The writing process: drafts, version history, reading notes, the Zotero library.</li>
+          <li>Verifiable references that the student has read.</li>
+          <li>The student's ability to explain any passage and its sources in conversation.</li>
+          <li>Consistency of voice and quality with the student's other work.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout callout--teach">
+      <p class="callout__title"><svg class="icon" aria-hidden="true"><use href="#i-cap"/></svg>For supervisors and examiners</p>
+      <p class="mb-0">Never treat a detector score alone as evidence of misconduct; detector vendors themselves advise against this. If writing seems generated, ask the student to talk you through the passage, show their notes and drafts, and open the cited papers to the relevant page. Follow your university's procedures for academic integrity.</p>
+    </div>
+
+    <div class="callout callout--key">
+      <p class="callout__title"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg>For students</p>
+      <ul class="mb-0">
+        <li>Keep your drafts, notes and search log: they are your evidence of authorship.</li>
+        <li>Disclose any AI assistance as your university requires.</li>
+        <li>Write specifically. Specific writing is both better scholarship and less likely to be mistaken for generated text.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- ============================== SCANNER ============================== -->
+  <article class="sub-panel" id="slop--scanner" data-sub="scanner" data-title="Slop scanner">
+    <div class="sub-head">
+      <h2>Slop scanner</h2>
+      <p class="sub-meta">Paste a paragraph of your own draft. The scanner highlights inflated words, stock phrases, formulaic patterns and citation problems. It runs in your browser; nothing is sent anywhere.</p>
+    </div>
+    <div class="tool" id="slop-tool">
+      <div class="tool__head">
+        <h3 class="tool__title"><svg class="icon" aria-hidden="true"><use href="#i-scan"/></svg>Scan a passage</h3>
+        <p>An editing aid, not an AI detector.</p>
+      </div>
+      <div class="tool__body">
+        <div class="field">
+          <label for="slop-input">Your text</label>
+          <textarea id="slop-input" placeholder="Paste a paragraph from your literature review here."></textarea>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn btn--primary btn--small" id="slop-run"><svg class="icon" aria-hidden="true"><use href="#i-scan"/></svg>Scan</button>
+          <button type="button" class="btn btn--small" id="slop-sample-bad">Load a sloppy sample</button>
+          <button type="button" class="btn btn--small" id="slop-sample-good">Load a clean sample</button>
+          <button type="button" class="btn btn--small btn--ghost" id="slop-clear">Clear</button>
+        </div>
+        <div id="slop-results" aria-live="polite" hidden>
+          <p class="field__label">Density of tells</p>
+          <div class="bands" id="slop-bands" data-band="0"><span>Low</span><span>Some</span><span>Noticeable</span><span>Heavy</span><span>Saturated</span></div>
+          <p class="tool__status" id="slop-summary"></p>
+          <div class="scan-legend">
+            <span class="tag tag--gilt">Inflated word</span>
+            <span class="tag tag--teach">Stock phrase</span>
+            <span class="tag tag--info">Pattern</span>
+            <span class="tag tag--bad">Citation problem</span>
+          </div>
+          <div class="scan-out" id="slop-out"></div>
+          <h4>Findings</h4>
+          <ul class="findings" id="slop-findings"></ul>
+        </div>
+      </div>
+    </div>
+    <p class="fine">How the band is set: the scanner counts flagged words and phrases plus pattern warnings per 100 words. Clean academic prose usually scores Low or Some. A high band means "edit this", not "a machine wrote this".</p>
+  </article>
+
+  <!-- ============================== DESLOP ============================== -->
+  <article class="sub-panel" id="slop--deslop" data-sub="deslop" data-title="Writing it out">
+    <div class="sub-head">
+      <h2>Writing the slop out</h2>
+      <p class="sub-meta">Eight habits that make your review clearer and unmistakably yours.</p>
+    </div>
+
+    <ol class="steps">
+      <li><strong>Be specific.</strong> Numbers, places, periods, sample sizes and names of policies. "Food prices rose by [figure]% in 2022, according to DOSM" says more than "prices are rising".</li>
+      <li><strong>Use plain verbs.</strong> Use, show, find, examine, estimate. Not leverage, showcase, delve, underscore.</li>
+      <li><strong>Cut empty openers and closers.</strong> Start with the claim; stop when the point is made.</li>
+      <li><strong>Make a judgement.</strong> Which evidence is stronger, and why? Fluent neutrality is the mark of generated text.</li>
+      <li><strong>Keep one term for one concept,</strong> defined once.</li>
+      <li><strong>Let rhythm follow meaning.</strong> A short sentence after a long one gives weight to the key point.</li>
+      <li><strong>Cite precisely,</strong> with page numbers for quotations and specific findings.</li>
+      <li><strong>Read it aloud.</strong> If it does not sound like something you would say to your supervisor, rewrite it.</li>
+    </ol>
+
+    <h3>Before and after</h3>
+    <div class="compare">
+      <div class="compare__side compare__bad">
+        <p class="compare__label"><svg class="icon" aria-hidden="true"><use href="#i-x-circle"/></svg>Sloppy</p>
+        <p class="mb-0">In today's rapidly evolving economic landscape, food security plays a pivotal role in fostering household well-being. Numerous studies have delved into this multifaceted issue, shedding light on its intricate dynamics. Moreover, it is not just about availability, but about access, affordability, and nutrition. Ultimately, a holistic approach is crucial to navigate these complexities.</p>
+      </div>
+      <div class="compare__side compare__good">
+        <p class="compare__label"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>Plain and specific</p>
+        <p class="mb-0">Food takes a larger share of spending in poorer households, so food price increases reduce their real income most. Deaton (1989) showed how to measure this effect from household survey data, and Ivanic and Martin (2008) found that the 2007 to 2008 price spikes raised poverty in most of the nine low-income countries they examined. Whether the same holds in Malaysia, where few B40 households produce their own food, has not been tested.</p>
+      </div>
+    </div>
+    <div class="compare">
+      <div class="compare__side compare__bad">
+        <p class="compare__label"><svg class="icon" aria-hidden="true"><use href="#i-x-circle"/></svg>Sloppy</p>
+        <p class="mb-0">This chapter will delve into a comprehensive overview of the literature, showcasing key insights and valuable perspectives that underscore the importance of the topic.</p>
+      </div>
+      <div class="compare__side compare__good">
+        <p class="compare__label"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"/></svg>Plain and specific</p>
+        <p class="mb-0">This chapter reviews theories of consumer demand and the evidence on how food spending responds to prices, and identifies what remains unknown for Malaysian households.</p>
+      </div>
+    </div>
+    <p class="fictional-note">Both "plain" versions cite real studies; see the <a href="#/chapter/empirical">empirical works</a> example for details.</p>
+
+    <div class="callout callout--try">
+      <p class="callout__title"><svg class="icon" aria-hidden="true"><use href="#i-pencil"/></svg>Practise</p>
+      <p class="mb-0">Tutorial <a href="#/practice/tutorials">T7</a> gives three passages to diagnose and rewrite, with model answers.</p>
+    </div>
+  </article>
+</section>

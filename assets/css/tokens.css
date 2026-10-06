@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Design tokens: "a bound thesis with a supervisor's margin"
+   Ink-navy binding, gilt lettering, cool paper, margin annotations.
+   All colours, type, spacing and motion live here as custom properties.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* --- Paper and ink ------------------------------------------------------ */
+  --paper:        #F3F5F8;   /* page ground: cool, not cream */
+  --surface:      #FFFFFF;   /* reading column, cards */
+  --surface-2:    #ECEFF4;   /* rails, table stripes, input wells */
+  --surface-3:    #E2E7EF;   /* pressed / selected wells */
+  --ink:          #172033;   /* body text */
+  --ink-2:        #435069;   /* secondary text */
+  --ink-3:        #5F6A82;   /* captions, meta (>= 4.5:1 on white) */
+  --rule:         #D5DBE5;   /* hairlines */
+  --rule-strong:  #B9C2D1;
+
+  /* --- Binding (masthead / contents rail) -------------------------------- */
+  --binding:      #14203A;
+  --binding-2:    #1C2B4C;
+  --binding-3:    #26385F;
+  --binding-ink:  #DCE3F0;   /* text on binding */
+  --binding-mute: #9DAAC4;
+  --art-funnel:   #14203A;
+
+  /* --- Gilt (the single accent) ------------------------------------------ */
+  --gilt:         #C99C45;   /* foil on navy; fills, rules, focus */
+  --gilt-ink:     #835B10;   /* gilt as text on light paper (5.6:1) */
+  --gilt-wash:    #FAF2E1;   /* margin-note ground */
+  --gilt-line:    #E4CD9C;
+
+  /* --- Semantic families (each: strong ink + quiet wash + line) ---------- */
+  --good:         #17664F;  --good-wash:  #E5F2EC;  --good-line:  #A9D3C2;
+  --bad:          #9E3426;  --bad-wash:   #FBEAE6;  --bad-line:   #EDB9AE;
+  --info:         #2A558F;  --info-wash:  #E8EFF9;  --info-line:  #B5C9E6;
+  --teach:        #5E4489;  --teach-wash: #F0EBF7;  --teach-line: #CDBDE5;
+  --ai:           #0B6372;  --ai-wash:    #E2F2F4;  --ai-line:    #A5D3DA;
+  --warn:         #8A5A00;  --warn-wash:  #FDF3DC;  --warn-line:  #EBCB86;
+
+  /* --- Selection, focus, highlights -------------------------------------- */
+  --selection:    #F3E2B8;
+  --focus:        #B07A14;
+  --mark:         #F8E3A6;
+  --mark-ink:     #3B2A00;
+
+  /* --- Type ---------------------------------------------------------------- */
+  --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-body:    "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-mono:    "Atkinson Hyperlegible Mono", "Cascadia Mono", Consolas, monospace;
+
+  --base-size:    1.125rem;            /* 18px body (Source Sans 3 has a modest x-height) */
+  --step--2:      0.78rem;
+  --step--1:      0.89rem;
+  --step-0:       1rem;
+  --step-1:       1.18rem;
+  --step-2:       1.42rem;
+  --step-3:       1.78rem;
+  --step-4:       2.3rem;
+  --step-5:       3rem;
+  --leading:      1.62;
+  --leading-tight:1.2;
+  --measure:      70ch;
+
+  /* --- Space (4px base) ---------------------------------------------------- */
+  --s-1: 0.25rem;  --s-2: 0.5rem;  --s-3: 0.75rem;  --s-4: 1rem;
+  --s-5: 1.5rem;   --s-6: 2rem;    --s-7: 3rem;     --s-8: 4rem;   --s-9: 6rem;
+  --gutter: 1rem;
+
+  /* --- Shape and depth ----------------------------------------------------- */
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --radius-l: 14px;
+  --shadow-1: 0 1px 2px rgba(20, 32, 58, 0.06), 0 2px 6px rgba(20, 32, 58, 0.05);
+  --shadow-2: 0 2px 4px rgba(20, 32, 58, 0.06), 0 10px 24px rgba(20, 32, 58, 0.10);
+  --shadow-3: 0 6px 12px rgba(20, 32, 58, 0.10), 0 24px 48px rgba(20, 32, 58, 0.16);
+
+  /* --- Motion (one signature curve, three durations) ---------------------- */
+  --ease:       cubic-bezier(0.2, 0, 0, 1);
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --t-quick:    140ms;
+  --t-standard: 220ms;
+  --t-slow:     420ms;
+
+  /* --- Layout ---------------------------------------------------------------- */
+  --rail-width:   17.5rem;
+  --margin-width: 15rem;
+  --masthead-h:   4.25rem;
+  --presenter-scale: 1;
+}
+
+/* ---------- Dark theme: library at night ---------- */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --paper:        #0D1322;
+    --surface:      #141C2E;
+    --surface-2:    #18223A;
+    --surface-3:    #1F2B47;
+    --ink:          #E4E8F1;
+    --ink-2:        #B3BCCF;
+    --ink-3:        #96A1B8;
+    --rule:         #2A3653;
+    --rule-strong:  #3A4867;
+    --binding:      #090E1B;
+    --binding-2:    #18233D;
+    --binding-3:    #24324F;
+    --binding-ink:  #DCE3F0;
+    --binding-mute: #8E9BB6;
+    --art-funnel:   #2C3F69;
+    --gilt:         #DDB45F;
+    --gilt-ink:     #E6C47D;
+    --gilt-wash:    #241F13;
+    --gilt-line:    #5A4A26;
+    --good:  #63C7A4;  --good-wash:  #10271F;  --good-line:  #23503F;
+    --bad:   #F2947F;  --bad-wash:   #2C1612;  --bad-line:   #5E2D24;
+    --info:  #93B6EA;  --info-wash:  #132139;  --info-line:  #2C4672;
+    --teach: #C7ACEC;  --teach-wash: #1F1830;  --teach-line: #47386A;
+    --ai:    #72D2E0;  --ai-wash:    #0E262B;  --ai-line:    #24525A;
+    --warn:  #F0C567;  --warn-wash:  #2A2110;  --warn-line:  #5C4719;
+    --selection:    #4A3D1D;
+    --focus:        #E8BF68;
+    --mark:         #5A4718;
+    --mark-ink:     #FFF3D6;
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
+    --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.35), 0 10px 24px rgba(0, 0, 0, 0.35);
+    --shadow-3: 0 6px 12px rgba(0, 0, 0, 0.4), 0 24px 48px rgba(0, 0, 0, 0.45);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper:        #0D1322;
+  --surface:      #141C2E;
+  --surface-2:    #18223A;
+  --surface-3:    #1F2B47;
+  --ink:          #E4E8F1;
+  --ink-2:        #B3BCCF;
+  --ink-3:        #96A1B8;
+  --rule:         #2A3653;
+  --rule-strong:  #3A4867;
+  --binding:      #090E1B;
+  --binding-2:    #18233D;
+  --binding-3:    #24324F;
+  --binding-ink:  #DCE3F0;
+  --binding-mute: #8E9BB6;
+  --art-funnel:   #2C3F69;
+  --gilt:         #DDB45F;
+  --gilt-ink:     #E6C47D;
+  --gilt-wash:    #241F13;
+  --gilt-line:    #5A4A26;
+  --good:  #63C7A4;  --good-wash:  #10271F;  --good-line:  #23503F;
+  --bad:   #F2947F;  --bad-wash:   #2C1612;  --bad-line:   #5E2D24;
+  --info:  #93B6EA;  --info-wash:  #132139;  --info-line:  #2C4672;
+  --teach: #C7ACEC;  --teach-wash: #1F1830;  --teach-line: #47386A;
+  --ai:    #72D2E0;  --ai-wash:    #0E262B;  --ai-line:    #24525A;
+  --warn:  #F0C567;  --warn-wash:  #2A2110;  --warn-line:  #5C4719;
+  --selection:    #4A3D1D;
+  --focus:        #E8BF68;
+  --mark:         #5A4718;
+  --mark-ink:     #FFF3D6;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.35), 0 2px 6px rgba(0, 0, 0, 0.25);
+  --shadow-2: 0 2px 4px rgba(0, 0, 0, 0.35), 0 10px 24px rgba(0, 0, 0, 0.35);
+  --shadow-3: 0 6px 12px rgba(0, 0, 0, 0.4), 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+/* ---------- Presenter mode scales everything from one dial ---------- */
+:root.presenting {
+  --presenter-scale: 1.22;
+  --base-size: calc(1.0625rem * var(--presenter-scale));
+  --measure: 62ch;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --base-size: 1rem;
+    --step-3: 1.55rem;
+    --step-4: 1.9rem;
+    --step-5: 2.3rem;
+  }
+}
