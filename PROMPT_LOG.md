@@ -82,3 +82,11 @@ The lecturer approved the implementation plan (13 main tabs, interactive tools, 
 - `motion-design` (LottieFiles)
 
 Git, GitHub CLI and Python 3.12 were also installed system-wide via winget.
+
+---
+
+## Entry 5 (2026-10-06): Deployment check
+
+> push and deploy the dashboard to https://github.com/soonjanjan-lang/Chapter2-LR-lectnotes-dashboard, have you?
+
+**Status at the time:** the dashboard was complete and committed locally (commit `8282e6d`) but not yet pushed, because GitHub CLI had not been signed in to the lecturer's account. Claude then attempted the push through Git Credential Manager's browser sign-in.
