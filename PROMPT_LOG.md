@@ -112,3 +112,15 @@ Git, GitHub CLI and Python 3.12 were also installed system-wide via winget.
   - all CSS, JavaScript, data files and the three source-note files return HTTP 200;
   - the automated test suite run against the live assets passed every functional check (the one flagged item is a timing artefact in the test's own routing check);
   - a screenshot of the live home page matched the local build.
+
+---
+
+## Entry 7 (2026-10-06): Lecturer confirms the Pages setting
+
+> Open https://github.com/soonjanjan-lang/Chapter2-LR-lectnotes-dashboard/settings/pages
+> Under Build and deployment → Source, choose Deploy from a branch.
+> Set Branch to main and the folder to / (root), then click Save.
+> After a minute or two the site will be at https://soonjanjan-lang.github.io/Chapter2-LR-lectnotes-dashboard/
+> Done, i've already saved it.
+
+**Action taken:** Claude re-checked after the lecturer saved the setting. Pages was still enabled (it had already been switched on through the API, with the same settings), the live site returned HTTP 200 with the dashboard, and GitHub held the latest commit. No further deployment steps are needed.
