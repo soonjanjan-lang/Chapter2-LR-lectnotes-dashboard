@@ -74,7 +74,10 @@ source-notes/             ← lecturer's original .docx/.pdf notes (reference on
 ```
 git add -A; git commit -m "…"; git push origin main
 ```
-GitHub Pages serves `main` at the repo root (`.nojekyll` is present). It takes about 1 minute to go live.
+GitHub Pages serves `main` at the repo root (`.nojekyll` is present). It was enabled on 2026-10-06 and redeploys automatically about a minute after each push.
+- Git pushes authenticate through Git Credential Manager (`C:\Program Files\Git\cmd\git.exe`). The GitHub CLI is installed (`C:\Program Files\GitHub CLI\gh.exe`) but not signed in; run `gh auth login --web` if CLI access is needed.
+- A Claude session started before Git and gh were installed must add them to PATH first: `$env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')`.
+- Commits use the lecturer's GitHub noreply address (276485682+soonjanjan-lang@users.noreply.github.com) so that the Gmail address stays private.
 
 ## Verified facts used in the content (2026-10-06)
 - Every real reference in the reading list was checked against Crossref or the publisher, including Soon & Ahmad (2015) RSER 44:877–887 (doi 10.1016/j.rser.2015.01.041) and Soon, Kamaruddin & Anuar (2018) IJES 7(2):134–146 (doi 10.1108/IJES-05-2017-0031).
