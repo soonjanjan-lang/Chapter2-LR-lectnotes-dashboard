@@ -89,4 +89,10 @@ Git, GitHub CLI and Python 3.12 were also installed system-wide via winget.
 
 > push and deploy the dashboard to https://github.com/soonjanjan-lang/Chapter2-LR-lectnotes-dashboard, have you?
 
-**Status at the time:** the dashboard was complete and committed locally (commit `8282e6d`) but not yet pushed, because GitHub CLI had not been signed in to the lecturer's account. Claude then attempted the push through Git Credential Manager's browser sign-in.
+**Status at the time:** the dashboard was complete and committed locally but not yet pushed, because GitHub CLI had not been signed in to the lecturer's account.
+
+**Action taken (2026-10-06):**
+- Git authenticated through Git Credential Manager. The first push was rejected because the lecturer had uploaded the three original note files to the repository root on GitHub (commit `ba3421f`, 17:11).
+- Claude confirmed the uploaded files were byte-identical to the copies in `source-notes/`. It rebased its commits on top of the upload, keeping the lecturer's commit in the history, and removed the duplicate root copies in a separate commit ("Keep the original notes only in source-notes/").
+- Pushed without force: `ba3421f..838386a` on `main`.
+- GitHub Pages could not be switched on from this session: the GitHub CLI was not signed in, and the stored Git credential could not be read non-interactively. The lecturer was asked to enable Pages in the repository settings (Settings > Pages > Deploy from a branch > `main` / root).
